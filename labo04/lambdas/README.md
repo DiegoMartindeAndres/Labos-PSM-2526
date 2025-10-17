@@ -313,10 +313,12 @@ fun trickOrTreat(
     } else {
         // Ejecutamos la función extraTreat con un valor de 5
         println(extraTreat(5))
-        return treat
+        println(treat(8))
+        return {}
     }
 }
-````
+
+```
 
 ---
 
