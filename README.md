@@ -29,6 +29,8 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 03d | [Reto Bancario](/labo03/colecciones/RetoBancario.md) | ✅ |
 | Lab 04a | [Funciones Lambda](/labo04/lambdas/README.md) |  |
 | Lab 04b | [Manual de Jetpack Compose: Construyendo tu primera interfaz gráfica](/labo04/GUI1/README.md) |  |
+| Lab 05a | [Gestión de estados](/labo05/GestionEstados/README.md) |  |
+| Lab 05b | App conversión de Unidades **[próximamente]** | ✅ |
 | Lab 05 | Gestión de estados App conversión de Unidades **[próximamente]** | ✅  |
 | Lab 06 | 🚽✂️📄 Piedra, Papel o Tijera con GUI **[próximamente]** |   |
 | Lab 07a | 📱 App Lista de la compra **[próximamente]** |   |
