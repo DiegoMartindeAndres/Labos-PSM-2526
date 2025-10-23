@@ -114,7 +114,7 @@ fun JuegoPaquetes() {
 
 ### Explicación del Código
 - `remember { mutableStateOf(0) }`: Esto nos permite recordar el número de paquetes que hemos encontrado. Utilizamos `remember` y `mutableStateOf` para que el valor se pueda actualizar y se refleje en la interfaz. Aunque pensemos que nos valdría con un `Int` y un `String`, necesitamos usar `remember` y `mutableStateOf` para que Compose sepa cuándo actualizar la interfaz.
-- `Button(onClick = {...})`: Cada vez que hacemos clic en un botón, actualizamos la dirección del barco y tenemos una oportunidad de encontrar un paquete usando `Random.nextBoolean()`, que devuelve `true` o `false` al azar.
+- `Button(onClick = {...})`: Cada vez que hacemos clic en un botón, actualizamos la dirección del la furgoneta que lleva los paquetes y tenemos una oportunidad de encontrar un paquete usando `Random.nextBoolean()`, que devuelve `true` o `false` al azar.
 
 ## 🌐 La Magia de los Estados
 Uno de los conceptos clave que se ilustra aquí es cómo **Jetpack Compose se encarga de actualizar la interfaz** cuando los valores cambian. Por ejemplo, al cambiar `packagesFound.value`, Compose detecta este cambio y actualiza el componente `Text` correspondiente sin necesidad de decirle explícitamente a la interfaz que cambie.
@@ -187,3 +187,163 @@ Imagina que `paquetesEncontrados` es un paquete con objetos dentro:
 - Sin usar `by`, necesitamos abrir el paquete para ver lo que hay dentro (`.value`).
 - Usando `by`, el producto está directamente en nuestras manos, sin necesidad de abrir el paquete.
 
+## 🔧 Solución
+
+🎉 ¡Enhorabuena! Si has llegado hasta aquí, ya tienes tu **segunda interfaz** creada en **Jetpack Compose**. ✨  
+A continuación tienes el **código completo** de la aplicación, pero recuerda: su propósito es **aprender y experimentar**, no simplemente copiar y pegar.  
+💡 **Ejecutarlo sin comprenderlo no te servirá de nada** — intenta analizarlo, modificarlo y entender cómo funciona cada parte. 👀
+
+
+<details>
+  <summary>Haz clic para ver el código</summary>
+
+```kotlin
+package es.uva.inf5g.psm.juegopaquetes
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import es.uva.inf5g.psm.juegopaquetes.ui.theme.JuegoPaquetesTheme
+import kotlin.math.max
+import kotlin.random.Random
+
+private const val STORM_DAMAGE = 5
+private const val BAD_CONDITION_THRESHOLD = 60 // Cambia este umbral si quieres
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            JuegoPaquetesTheme {
+                Scaffold(
+                    modifier = Modifier.fillMaxSize()
+                ) { innerPadding ->
+                    JuegoPaquetes(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding)
+                            .padding(16.dp)
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun JuegoPaquetes(modifier: Modifier = Modifier) {
+    var packagesFound by remember { mutableStateOf(0) }
+    var direction by remember { mutableStateOf("Norte") }
+
+    // 🛠️ Desafío 1 & 2: estado adicional
+    var stormsFound by remember { mutableStateOf(0) }
+    var vanHealth by remember { mutableStateOf(100) }
+
+    fun handleMove(newDirection: String) {
+        direction = newDirection
+        // 50% de encontrar paquete
+        val foundPackage = Random.nextBoolean()
+        if (foundPackage) {
+            packagesFound += 1
+            return
+        }
+        // Si NO hay paquete ➜ 1 entre 4 de tormenta
+        val storm = Random.nextInt(4) == 0
+        if (storm) {
+            stormsFound += 1
+            vanHealth = max(0, vanHealth - STORM_DAMAGE)
+        }
+    }
+
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text(text = "Paquetes encontrados: $packagesFound", style = MaterialTheme.typography.titleMedium)
+        Text(text = "Dirección actual: $direction", style = MaterialTheme.typography.bodyLarge)
+
+        // 🛠️ Desafío 1: panel de tormentas
+        StormsPanel(stormsFound = stormsFound)
+
+        // 🛠️ Desafío 2: estado de la furgoneta
+        VanStatus(health = vanHealth)
+
+        // Controles de movimiento en cuadrícula 2x2
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Button(onClick = { handleMove("Norte") }) { Text("Ir al Norte") }
+                Button(onClick = { handleMove("Sur") }) { Text("Ir al Sur") }
+            }
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Button(onClick = { handleMove("Este") }) { Text("Ir al Este") }
+                Button(onClick = { handleMove("Oeste") }) { Text("Ir al Oeste") }
+            }
+        }
+
+        // (Opcional) Botón de reinicio
+        OutlinedButton(onClick = {
+            packagesFound = 0
+            direction = "Norte"
+            stormsFound = 0
+            vanHealth = 100
+        }) {
+            Text("Reiniciar")
+        }
+    }
+}
+
+@Composable
+fun StormsPanel(stormsFound: Int, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "⛈️ Tormentas encontradas: $stormsFound",
+            style = MaterialTheme.typography.titleSmall
+        )
+    }
+}
+
+@Composable
+fun VanStatus(health: Int, modifier: Modifier = Modifier) {
+    val condition = if (health >= BAD_CONDITION_THRESHOLD) "Buena" else "Mala"
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(text = "🚐 Estado de la furgoneta: $condition")
+        Text(text = "Vida: $health/100")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun JuegoPaquetesPreview() {
+    JuegoPaquetesTheme {
+        Scaffold { innerPadding ->
+            JuegoPaquetes(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding)
+                    .padding(16.dp)
+            )
+        }
+    }
+}
+
+
+
+```
+
+</details>
