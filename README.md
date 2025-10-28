@@ -31,11 +31,11 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 04b | [Manual de Jetpack Compose: Construyendo tu primera interfaz gráfica](/labo04/GUI1/README.md) |  |
 | Lab 05a | [Gestión de estados](/labo05/GestionEstados/README.md) |  |
 | Lab 05b | App conversión de Unidades **[próximamente]** | ✅ |
-| Lab 06 | 🚽✂️📄 Piedra, Papel o Tijera con GUI **[próximamente]** |   |
-| Lab 07a | 📱 App Lista de la compra **[próximamente]** |   |
+| Lab 06 | 🚽✂️📄 Piedra, Papel o Tijera con GUI **[próximamente]** | ✅ |
+| Lab 07a | 📱 App Lista de la compra **[próximamente]** | ✅ |
 | Lab 07b | Manual Kotlin: Map, Copy, Let **[próximamente]** |   |
-| Lab 08 | 📱 App Lista de la compra usando MVVM **[próximamente]** |   |
-| Lab 09 | 🌐 Aplicación de recetas de comida **[próximamente]** |   |
+| Lab 08 | 📱 App Lista de la compra usando MVVM **[próximamente]** | ✅ |
+| Lab 09 | 🌐 Aplicación de recetas de comida **[próximamente]** | ✅ |
 | Lab 10a | 🚀 Implementación básica de Navegación en Jetpack Compose **[próximamente]** |   |
 | Lab 10b | 🍽️ Continuación aplicación de recetas: Navegación a los detalles de categoría **[próximamente]** |   |
 | Lab 11a | 🛠️ Preparación del proyecto para trabajar con ROOM **[próximamente]** |   |
