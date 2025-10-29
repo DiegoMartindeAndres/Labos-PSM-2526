@@ -30,7 +30,7 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 04a | [Funciones Lambda](/labo04/lambdas/README.md) |  |
 | Lab 04b | [Manual de Jetpack Compose: Construyendo tu primera interfaz gráfica](/labo04/GUI1/README.md) |  |
 | Lab 05a | [Gestión de estados](/labo05/GestionEstados/README.md) |  |
-| Lab 05b | App conversión de Unidades **[próximamente]** | ✅ |
+| Lab 05b | [App conversión de Unidades](/labo05/AppConversionUnidades/README.md) | ✅ |
 | Lab 06 | 🚽✂️📄 Piedra, Papel o Tijera con GUI **[próximamente]** | ✅ |
 | Lab 07a | 📱 App Lista de la compra **[próximamente]** | ✅ |
 | Lab 07b | Manual Kotlin: Map, Copy, Let **[próximamente]** |   |
