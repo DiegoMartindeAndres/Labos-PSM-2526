@@ -31,8 +31,8 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 04b | [Manual de Jetpack Compose: Construyendo tu primera interfaz gráfica](/labo04/GUI1/README.md) |  |
 | Lab 05a | [Gestión de estados](/labo05/GestionEstados/README.md) |  |
 | Lab 05b | [App conversión de Unidades](/labo05/AppConversionUnidades/README.md) | ✅ |
-| Lab 06 | 🚽✂️📄 Piedra, Papel o Tijera con GUI **[próximamente]** | ✅ |
-| Lab 07a | Manual Kotlin: Map, Copy, Let **[próximamente]** |   |
+| Lab 06 | [🚽✂️📄 Piedra, Papel o Tijera con GUI](/labo06/README.md) | ✅ |
+| Lab 07a | Programación funcional (Map, Copy, Let) **[próximamente]** |   |
 | Lab 07b | 📱 App Lista de la compra **[próximamente]** | ✅ |
 | Lab 08 | 📱 App Lista de la compra usando MVVM **[próximamente]** | ✅ |
 | Lab 09 | 🌐 Aplicación de recetas de comida **[próximamente]** | ✅ |
