@@ -1,3 +1,4 @@
+```kotlin
 package es.uva.inf5g.psm.piedrapapeltijeravisual
 
 import android.media.MediaPlayer
@@ -151,3 +152,5 @@ fun PiedraPapelTijeraApp(modifier: Modifier, onPlaySound: (Int) -> Unit) {
 fun PiedraPapelTijeraAppPreview() {
     PiedraPapelTijeraApp(Modifier, onPlaySound = {})
 }
+
+```
