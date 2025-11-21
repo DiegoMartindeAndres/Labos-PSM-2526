@@ -12,3 +12,13 @@ En este laboratorio transformarás tu aplicación de la **Lista de la Compra** (
 
 📌 *En resumen:* debes **refactorizar tu aplicación actual del Lab 7 para que siga MVVM**, manteniendo el mismo comportamiento funcional, pero con una arquitectura limpia y separada por capas.
 
+## ✅ Solución disponible
+
+Ya puedes consultar una posible solución completamente implementada en la siguiente dirección web:
+
+👉 **[🔗 Ver solución del laboratorio](./sol/)**
+
+En esa página encontrarás un ejemplo funcional que muestra cómo estructurar el ViewModel, cómo enlazarlo correctamente con Jetpack Compose y cómo mantener el estado de manera eficiente.
+
+La solución es solo **una referencia**: puedes inspirarte en ella, pero se recomienda intentar resolver el laboratorio primero por tu cuenta.
+
