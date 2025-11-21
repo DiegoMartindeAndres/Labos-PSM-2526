@@ -16,7 +16,7 @@ En este laboratorio transformarás tu aplicación de la **Lista de la Compra** (
 
 Ya puedes consultar una posible solución completamente implementada en la siguiente dirección web:
 
-👉 **[Solución](./sol/)**
+👉 **[🔗 Ver solución del laboratorio](./sol/)**
 
 En esa página encontrarás un ejemplo funcional que muestra cómo estructurar el ViewModel, cómo enlazarlo correctamente con Jetpack Compose y cómo mantener el estado de manera eficiente.
 
