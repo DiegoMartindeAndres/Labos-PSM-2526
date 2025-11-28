@@ -36,7 +36,7 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 07b | [📱 App Lista de la compra](/labo07/README.md) | ✅ |
 | Lab 08 | [📱 App Lista de la compra usando MVVM](/labo08/README.md) | ✅ |
 | Lab 09 | [🌐 Aplicación de recetas de comida](/labo09/README.md) | ✅ |
-| Lab 10a | 🚀 Implementación básica de Navegación en Jetpack Compose **[próximamente]** |   |
+| Lab 10a | [🚀 Implementación básica de Navegación en Jetpack Compose](/labo10/EjNavegacion/README.md) | ✅ |
 | Lab 10b | 🍽️ Continuación aplicación de recetas: Navegación a los detalles de categoría **[próximamente]** |   |
 | Lab 11a | 🛠️ Preparación del proyecto para trabajar con ROOM **[próximamente]** |   |
 | Lab 11b | 🚀 Aplicación de lista de deseos básica con Scaffold y Floating Action Button **[próximamente]** | ✅ |
