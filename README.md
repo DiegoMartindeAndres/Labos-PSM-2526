@@ -38,9 +38,22 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 09 | [🌐 Aplicación de recetas de comida](/labo09/README.md) | ✅ |
 | Lab 10a | [🚀 Implementación básica de Navegación en Jetpack Compose](/labo10/EjNavegacion/README.md) | ✅ |
 | Lab 10b | [🍽️ Continuación aplicación de recetas: Navegación a los detalles de categoría](/labo10/RecetasNavegacion/README.md) | ✅ |
-| Lab 11a | 🛠️ Preparación del proyecto para trabajar con ROOM **[próximamente]** |   |
-| Lab 11b | 🚀 Aplicación de lista de deseos básica con Scaffold y Floating Action Button **[próximamente]** | ✅ |
-| Lab 11c | 📱 Aplicación Lista de deseos con `Room Database` **[próximamente]** | ✅ |
+| Lab 12a | [🚀 Conexión entre Android y `Firebase` (`Firestore`)](/labo12/a/README.md) | |
+| Lab 12b | 🔥 App de Recetas de cocina y `Firebase` (`Firestore`) **Próximamente** |✅ |
+
+
+
+## Bonobús track 🚌
+
+¿Quieres saber más sobre Room Database?, Puedes seguir el siguiente track de laboratorios opcionales para profundizar en este tema.
+
+OJO!👁️ El labo 11a puede estar obsoleto con las nuevas versiones de Android Studio y Room, pero el labo 11b y 11c son totalmente válidos.
+
+| Laboratorio | Nombre | Evaluable |
+|-------------|-----------|-----------|
+| Lab 11a | [🛠️ Preparación del proyecto para trabajar con ROOM](/labo11/1-Prep/README.md) |  |
+| Lab 11b | [🚀 Aplicación de lista de deseos básica con Scaffold y Floating Action Button](/labo11/2-GUI/README.md) |  |
+| Lab 11c | [📱 Aplicación Lista de deseos con `Room Database`](/labo11/3-DDBB/README.md) | |
 
 
 (Iremos añadiendo más laboratorios a medida que avance el curso).
