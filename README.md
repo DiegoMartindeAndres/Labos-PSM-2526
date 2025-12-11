@@ -51,7 +51,7 @@ OJO!👁️ El labo 11a puede estar obsoleto con las nuevas versiones de Android
 
 | Laboratorio | Nombre | Evaluable |
 |-------------|-----------|-----------|
-| Lab 11a | [🛠️ Preparación del proyecto para trabajar con ROOM](/labo11/1-Prep/README.md) |  |
+| Lab 11a | [🛠️ Preparación del proyecto para trabajar con ROOM **OJO! puede que esté obsoletas las librerías**](/labo11/1-Prep/README.md) |  |
 | Lab 11b | [🚀 Aplicación de lista de deseos básica con Scaffold y Floating Action Button](/labo11/2-GUI/README.md) |  |
 | Lab 11c | [📱 Aplicación Lista de deseos con `Room Database`](/labo11/3-DDBB/README.md) | |
 
