@@ -6,7 +6,8 @@ Vamos a partir de la aplicación de recetas del labo anterior y vamos a añadir 
 
 
 ## Ficheros de inicio
-(En esta dirección puedes descargarte los ficheros de inicio de la aplicación.)[./src/]
+[En esta dirección puedes descargarte los ficheros de inicio de la aplicación](./src/)
+
 
 Cada vez que se explique cómo se hace x en el labo se explicará en orden de construcción, por ejemplo: al explicar cómo se sube algo a firebase se dividirá en **Repository -> ViewModel -> View**
 
@@ -23,44 +24,44 @@ Vamos con ello. Primero de todo: https://firebase.google.com
 Comenzamos con la creación del proyecto en firebase, yo he decidido llamarlo **FireStove**
 
 <p align="center">
-  <img src="imgs/image057.png" width="80%"/>
+  <img src="img/image057.png" width="80%"/>
 </p>
 
 Ahora no hemos hecho nada más que hacerle hueco a donde va a ir nuestra app, ahora toca añadirla:
 
 <p align="center">
-  <img src="imgs/image061.png" width="40%"/>
+  <img src="img/image061.png" width="40%"/>
 </p>
 
 Click en "Android"
 
 <p align="center">
-  <img src="imgs/image062.png" width="40%"/>
+  <img src="img/image062.png" width="40%"/>
 </p>
 
 y nos topamos con esta pantalla que nos pide el paquete de nuestra app
 
 <p align="center">
-  <img src="imgs/image063.png" width="40%"/>
+  <img src="img/image063.png" width="40%"/>
 </p>
 
 lo podéis encontrar en varios sitios pero hay 2 muy claros:
 -	En la vista de paquetes
 
 <p align="center">
-  <img src="imgs/image064.png" width="90%"/>
+  <img src="img/image064.png" width="90%"/>
 </p>
 
 -	En build.gradle.kts(Module :app)
  
 <p align="center">
-  <img src="imgs/image066.png" width="90%"/>
+  <img src="img/image066.png" width="90%"/>
 </p>
 
 Ahora nos descargamos el google-services.json y siguiendo los pasos movemos el archivo descargado al directorio raíz de la app (a la altura de `app`) y le damos a siguiente
 
 <p align="center">
-  <img src="imgs/image080.png" width="90%"/>
+  <img src="img/image080.png" width="90%"/>
 </p>
 
 Ahora toca una parte delicada pero sencilla: sigue los pasos que indica Firebase e introduce las líneas en los archivos que te marca. Aquí existe una herramienta de Android Studio que intenta hacerlo automáticamente, pero a veces lo hace mal; por eso Firebase recomienda seguir los pasos manualmente.
@@ -78,31 +79,31 @@ Le damos a sync now y nos debería aparecer un mensaje con `BUILD SUCCESFUL IN x
 Volvemos a firebase, le damos a siguientente y luego “ir a la consola” sin tocar nada más
 
 <p align="center">
-  <img src="imgs/image070.png" width="90%"/>
+  <img src="img/image070.png" width="90%"/>
 </p>
 
 Esta es la consola de firebase, desde donde podemos gestionar nuestra aplicación, añadirle herramientas, tocar datos, borrarla... :
 
 <p align="center">
-  <img src="imgs/image073.png" width="90%"/>
+  <img src="img/image073.png" width="90%"/>
 </p>
 
 En pasos anteriores, en la aplicación hemos traído la dependencia de firestore pero nuestra aplicación de firebase no lo sabe todavía a si que hay que actualizarla. Nos vamos a ir a Compilación/Firestore Database
 
 <p align="center">
-  <img src="imgs/image074.png" width="45%"/>
+  <img src="img/image074.png" width="45%"/>
 </p>
 
 Le damos al botón Crear base de datos
 
 <p align="center">
-  <img src="imgs/image075.png" width="45%"/>
+  <img src="img/image075.png" width="45%"/>
 </p>
 
 Edición Standard
 
 <p align="center">
-  <img src="imgs/image076.png" width="90%"/>
+  <img src="img/image076.png" width="90%"/>
 </p>
 
 ID de la base de datos: (default)
@@ -110,19 +111,19 @@ ID de la base de datos: (default)
 Ubicación: europe-southwest1 (Madrid)
 
 <p align="center">
-  <img src="imgs/image078.png" width="90%"/>
+  <img src="img/image078.png" width="90%"/>
 </p>
 
 Configuramos la base de datos ya en modo de producción, en el modo de prueba las reglas (que veremos más tarde) son temporales y hay que actualizarlas cada 30 días, no queremos eso
 
 <p align="center">
-  <img src="imgs/image081.png" width="90%"/>
+  <img src="img/image081.png" width="90%"/>
 </p>
 
 Y ya hemos llegado a una vista que vamos a visitar muy a menudo:
 
 <p align="center">
-  <img src="imgs/image082.png" width="90%"/>
+  <img src="img/image082.png" width="90%"/>
 </p>
 
 Aquí nos irán apareciendo las recetas que vayamos añadiendo desde la app. Podremos crearlas a mano desde aquí (no tiene mucho sentido), editar las que vengan de la aplicación o incluso borrarlas.
@@ -132,13 +133,13 @@ Pero ahora mismo, por defecto, en esta base de datos nadie puede hacer nada por 
 Nos vamos a ir al apartado de `Reglas` y vamos a quitar las que hay y  vamos a cambiar el `false` por `true` y le damos a **Publicar**, quedando algo así:
 
 <p align="center">
-  <img src="imgs/image084.png" width="90%"/>
+  <img src="img/image084.png" width="90%"/>
 </p>
 
 Con esto acabamos de hacer nuestra base de datos **pública**, porque las reglas nos dejan hacer lo que queramos con ella, seamos quienes seamos, desde dentro o desde fuera de la app. Por eso sale ese precioso mensaje en rojo avisando de que lo que estamos haciendo es peligroso:
 
 <p align="center">
-  <img src="imgs/image085.png" width="90%"/>
+  <img src="img/image085.png" width="90%"/>
 </p>
 
 La configuración de la base de datos en la consola termina aquí finalmente, ahora nos vamos a volver a kotlin para decirle a la app cómo y cuando se escriben y se leen los datos.
@@ -584,7 +585,7 @@ NavigationBarItem(
 El resultado esperado es este:
 
 <p align="center">
-  <img src="imgs/image055.png" width="40%"/>
+  <img src="img/image055.png" width="40%"/>
 </p>
 
 <br>
@@ -592,10 +593,10 @@ El resultado esperado es este:
 Esto ya es completamente funcional, es deicr, si rellenas los campos obligatorios y te vas a firebase verás tu primera receta:
 
 <p align="center">
-  <img src="imgs/image087.png" width="45%"/>
+  <img src="img/image087.png" width="45%"/>
 </p>
 <p align="center">
-  <img src="imgs/image089.png" width="95%"/>
+  <img src="img/image089.png" width="95%"/>
 </p>
 
 
@@ -728,7 +729,7 @@ NavigationBarItem(
 Y con eto ya deberías poder ver las recetas que subiste a firestore:
 
 <p align="center">
-  <img src="imgs/image091.png" width="45%"/>
+  <img src="img/image091.png" width="45%"/>
 </p>
 
 (yo añadí más recetas para probar que efectivamente me traía varias y no una única sola o que la vista no pintara la lista)
