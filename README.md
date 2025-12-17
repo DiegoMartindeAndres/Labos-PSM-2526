@@ -39,7 +39,7 @@ Ante cualquier error o sugerencia, por favor, contáctame en mi correo: [diego.m
 | Lab 10a | [🚀 Implementación básica de Navegación en Jetpack Compose](/labo10/EjNavegacion/README.md) | ✅ |
 | Lab 10b | [🍽️ Continuación aplicación de recetas: Navegación a los detalles de categoría](/labo10/RecetasNavegacion/README.md) | ✅ |
 | Lab 12a | [🚀 Conexión entre Android y `Firebase` (`Firestore`)](/labo12/a/README.md) | |
-| Lab 12b | 🔥 App de Recetas de cocina y `Firebase` (`Firestore`) **Próximamente** |✅ |
+| Lab 12b | [🔥 App de Recetas de cocina y `Firebase` (`Firestore`)](/labo12/b/README.md)  |✅ |
 
 
 
@@ -56,4 +56,3 @@ OJO!👁️ El labo 11a puede estar obsoleto con las nuevas versiones de Android
 | Lab 11c | [📱 Aplicación Lista de deseos con `Room Database`](/labo11/3-DDBB/README.md) | |
 
 
-(Iremos añadiendo más laboratorios a medida que avance el curso).
